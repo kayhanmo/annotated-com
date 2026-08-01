@@ -206,3 +206,32 @@ button { cursor: pointer; }
 .page { display: none; }
 .page.active { display: block; }
 .video-frame { aspect-ratio: 16/9; background: linear-gradient(145deg, #1a2230, #0d1016); }
+
+/* mobile nav */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
+  }
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.15rem;
+  }
+  .nav a, .nav .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.75rem;
+  }
+  .hero { padding: 2rem 0 1.5rem; }
+  .hero h1 { font-size: 1.85rem; }
+  .cards { grid-template-columns: 1fr; }
+  .layout-clip { grid-template-columns: 1fr; }
+  .range-row { grid-template-columns: 1fr 1fr; }
+  .footer { font-size: 0.78rem; }
+}
