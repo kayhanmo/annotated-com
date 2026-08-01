@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Annotated — clip, annotate, share the open web</title>
+  <meta name="description" content="Chrome sidebar that clips text, audio, and video from the web, publishes public landing pages with source links, and a social feed." />
+  <meta property="og:title" content="Annotated" />
+  <meta property="og:description" content="Margin notes for the open web — clip, annotate, share." />
+  <link rel="icon" href="./favicon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="chrome-shell">
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="#/">
+          <span class="brand-mark" aria-hidden="true"></span>
+          Annotated
+        </a>
+        <nav class="nav" id="nav">
+          <a href="#/" data-route="/">Home</a>
+          <a href="#/feed" data-route="/feed">Feed</a>
+          <a href="#/clip" data-route="/clip">Sidebar</a>
+          <a href="#/demo" data-route="/demo">Demo video</a>
+          <a class="btn btn-primary" href="#/clip">Open clipper</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app"></main>
+
+    <footer class="footer">
+      <div class="container">
+        Annotated demo for the Jason Calacanis annotated.com bounty · Source always linked · Clips ≤ 90s · 240p label · File a claim
+      </div>
+    </footer>
+  </div>
+
+  <div class="dialog-backdrop" id="claim-dialog" role="dialog" aria-modal="true">
+    <div class="dialog">
+      <h3>File a claim</h3>
+      <p class="muted" style="margin:0 0 0.9rem">Report a rights issue on this public annotation. Claims are logged for review (demo).</p>
+      <div class="field" style="margin-bottom:0.7rem">
+        <label for="claim-email">Contact email</label>
+        <input id="claim-email" type="email" placeholder="you@example.com" />
+      </div>
+      <div class="field" style="margin-bottom:0.9rem">
+        <label for="claim-reason">Reason</label>
+        <textarea id="claim-reason" placeholder="Describe the claim…"></textarea>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" id="claim-submit" type="button">Submit claim</button>
+        <button class="btn btn-ghost" id="claim-cancel" type="button">Cancel</button>
+      </div>
+      <p class="subtle" id="claim-status" style="margin:0.7rem 0 0"></p>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
