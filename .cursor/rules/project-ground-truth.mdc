@@ -1,0 +1,27 @@
+---
+description: annotated-com — Always Apply Cursor ground truth
+alwaysApply: true
+---
+
+# annotated-com — Cursor ground truth
+
+## Topology
+Cursor starts from this repo + these rules. It does **not** inherit Claude Project memory. Prefer the codebase over pasted chat.
+
+## Verification
+1. Every PR ships evidence (command output / diff), not assertion.
+2. Confirm targets exist before patching. If a symbol is missing, stop and report — do not invent paths.
+3. One model's transcript is never another model's evidence.
+
+## Standing
+- Branch → PR → Founder (Kayhan) review → merge.
+- One task per PR. No bundling unrelated surfaces.
+- Deletions are deletions (not "coming soon" / commented-out / feature-flagged off).
+- Never invent numbers, approvals, or citations — mark UNKNOWN.
+- Public brand: Aurelian = holding voice only. Never use Biotex publicly (Pure Monograph renamed).
+
+## Entity
+Repo: kayhanmo/annotated-com — Annotated web clip/annotate demo (public).
+
+## Notes
+- Public repo — no secrets in commits.
